@@ -7,9 +7,7 @@ public class Error {
     private String message;
 
     public Error() {
-        this.active = true;
-        this.status = 1;
-        this.message = "error: ';' expected";
+
     }
 
     public Error(boolean active, int status, String message) {
