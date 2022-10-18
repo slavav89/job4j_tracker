@@ -14,7 +14,7 @@ public class MaxTest {
         int front = 3;
         int rear = 4;
         int expected = 4;
-        int rsl = a.max(rear, left, right, front);
+        int rsl = a.maxs(rear, left, right, front);
         assertThat(rsl).isEqualTo(expected);
 
     }
@@ -27,7 +27,7 @@ public class MaxTest {
         int front = 0;
         int rear = 9;
         int expected = 9;
-        int rsl = a.max(rear, left, right, front);
+        int rsl = a.maxs(rear, left, right, front);
         assertThat(rsl).isEqualTo(expected);
     }
 
@@ -39,7 +39,7 @@ public class MaxTest {
         int front = 0;
         int rear = 0;
         int expected = 0;
-        int rsl = a.max(rear, left, right, front);
+        int rsl = a.maxs(rear, left, right, front);
         assertThat(rsl).isEqualTo(expected);
     }
 }
