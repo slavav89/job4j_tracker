@@ -7,8 +7,8 @@ public class Reduce {
      * Была ошибка связанная с однинаковыми названиями
      * переменных у поля класса и аргумента метода to()
      */
-    public void to(int[] arrays) {
-        array = arrays;
+    public void to(int[] array) {
+        this.array = array;
     }
 
     public void print() {
