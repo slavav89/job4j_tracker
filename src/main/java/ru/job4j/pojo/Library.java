@@ -17,7 +17,7 @@ public class Library {
             System.out.println("Название книги " + book.getName()
                     + " c количеством страниц: " + book.getPage());
         }
-        System.out.println("\nНовый порядок книг\n");
+        System.out.println(System.lineSeparator() + "Новый порядок книг" + System.lineSeparator());
         temp = books[0];
         books[0] = books[3];
         books[3] = temp;
@@ -26,7 +26,7 @@ public class Library {
             System.out.println("Название книги " + book.getName()
                     + " c количеством страниц: " + book.getPage());
         }
-        System.out.println("\nвывод книги с именем Clean code\n");
+        System.out.println(System.lineSeparator() + "вывод книги с именем Clean code" + System.lineSeparator());
         for (int index = 0; index < books.length; index++) {
             Book book = books[index];
             if ("Clean code".equals(book.getName())) {
