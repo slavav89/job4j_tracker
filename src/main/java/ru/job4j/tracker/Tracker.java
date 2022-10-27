@@ -7,13 +7,13 @@ public class Tracker {
     private int ids = 1;
     private int size = 0;
 
-    public Item add(Item item) { //Добавление заявок
-        item.setId(ids++); //проставляем уникал ключ
+    public Item add(Item item) {
+        item.setId(ids++);
         items[size++] = item;
         return item;
     }
 
-    public Item[] findAll() { //Получение списка всех заявок
+    public Item[] findAll() {
         Item[] rsl = new Item[size];
         int count = 0;
         for (int i = 0; i < items.length; i++) {
@@ -25,7 +25,7 @@ public class Tracker {
         return rsl;
     }
 
-    public Item[] findByName(String key) { //получение списка по имени
+    public Item[] findByName(String key) {
         Item[] rsl = new Item[items.length];
         int count = 0;
         for (int i = 0; i < items.length; i++) {
@@ -38,7 +38,7 @@ public class Tracker {
         return rsl;
     }
 
-    public Item findById(int id) { //получение заявки по id
+    public Item findById(int id) {
         Item rsl = null;
         for (int index = 0; index < size; index++) {
             Item item = items[index];
