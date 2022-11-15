@@ -35,7 +35,6 @@ public class StartUI {
                 }
             } else if (select == 3) {
                 System.out.println("===Delete item===");
-                System.out.print("Enter id: ");
                 int id = input.askInt("Enter id: ");
                 if (tracker.delete(id)) {
                     System.out.println("Заявка удалена успешно.");
