@@ -35,7 +35,7 @@ public class StartUI {
                 new DeleteAction(output),
                 new FindIdAction(output),
                 new FindNameAction(output),
-                new ExitAction()
+                new ExitAction(output)
         };
         new StartUI(output).init(input, tracker, actions);
     }
