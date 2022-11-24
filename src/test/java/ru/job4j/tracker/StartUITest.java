@@ -136,7 +136,7 @@ public class StartUITest {
         Item two = tracker.add(new Item("test2"));
         Item three = tracker.add(new Item("test1"));
         Input in = new StubInput(
-                new String[]{"0", "test1", "1"}
+                new String[]{"0", one.getName(), "1"}
         );
         UserAction[] actions = new UserAction[]{
                 new FindNameAction(out),
