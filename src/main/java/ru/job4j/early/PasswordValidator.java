@@ -17,21 +17,21 @@ public class PasswordValidator {
         if (password.equals(password.toUpperCase())) {
             throw new IllegalArgumentException("Password should contain at least one lowercase letter");
         }
-        int count_1 = 0;
-        int count_2 = 0;
+        int count1 = 0;
+        int count2 = 0;
         char[] array = password.toCharArray();
         for (char ar : array) {
             if (isDigit(ar)) {
-                count_1++;
+                count1++;
             }
             if (isDigit(ar) || isLetter(ar)) {
-                count_2++;
+                count2++;
             }
         }
-        if (count_1 == 0) {
+        if (count1 == 0) {
             throw new IllegalArgumentException("Password should contain at least one figure");
         }
-        if (count_2 == password.length()) {
+        if (count2 == password.length()) {
             throw new IllegalArgumentException("Password should contain at least one special symbol");
         }
         String[] pass = new String[]{"qwerty", "12345", "password", "admin", "user"};
