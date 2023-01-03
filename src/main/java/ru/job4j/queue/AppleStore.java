@@ -1,5 +1,6 @@
 package ru.job4j.queue;
 
+import java.util.List;
 import java.util.Queue;
 
 public class AppleStore {
@@ -13,24 +14,16 @@ public class AppleStore {
     }
 
     public String getLastHappyCustomer() {
-        String name = "";
-        for (int i = 0; i <= count; i++) {
-            name = queue.poll().name();
-            if (i == count - 1) {
-                break;
-            }
+        for (int i = 0; i < count - 1; i++) {
+            queue.poll();
         }
-        return name;
+        return queue.poll().name();
     }
 
     public String getLastUpsetCustomer() {
-        String name = "";
-        for (int i = 0; i <= count; i++) {
-            name = queue.poll().name();
-            if (i == count) {
-                break;
-            }
+        for (int i = 0; i < count; i++) {
+            queue.poll();
         }
-        return name;
+        return queue.poll().name();
     }
 }
