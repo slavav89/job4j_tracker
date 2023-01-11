@@ -29,7 +29,7 @@ public class ItemTest {
     }
 
     @Test
-    public void ItemDescByName() {
+    public void isItemDescByName() {
         List<Item> items = Arrays.asList(
                 new Item(15, "Evgeniy"),
                 new Item(34, "Roman"),
