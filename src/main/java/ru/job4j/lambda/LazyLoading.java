@@ -3,7 +3,7 @@ package ru.job4j.lambda;
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class lazyLoading {
+public class LazyLoading {
     public static void main(String[] args) {
         String[] names = {
                 "Slava",
