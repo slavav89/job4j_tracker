@@ -27,8 +27,8 @@ class FunctionCalculateTest {
     @Test
     public void whenIndicativeFunctionThenIndicativeResult() {
         FunctionCalculate function = new FunctionCalculate();
-        List<Double> result = function.diapason(3, 5, x -> Math.pow(x, 3));
-        List<Double> expected = Arrays.asList(27D, 64D);
+        List<Double> result = function.diapason(3, 5, x -> Math.pow(3, x));
+        List<Double> expected = Arrays.asList(27D, 81D);
         assertThat(result).containsAll(expected);
     }
 }
