@@ -7,8 +7,6 @@ import java.util.stream.Stream;
 
 import static java.util.List.*;
 
-import static java.util.stream.Nodes.collect;
-
 public class Greeting {
     private String name;
     private int age;
