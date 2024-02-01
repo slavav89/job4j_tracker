@@ -85,11 +85,7 @@ public class SqlTracker implements Store {
         try (PreparedStatement statement = connection.prepareStatement("SELECT * FROM items")) {
             try (ResultSet rs = statement.executeQuery()) {
                 while (rs.next()) {
-                    result.add(new Item(
-                            rs.getInt("id"),
-                            rs.getString("name"),
-                            rs.getTimestamp("created").toLocalDateTime()
-                    ));
+                    result.add(createItem(rs));
                 }
             }
         } catch (SQLException e) {
@@ -106,11 +102,7 @@ public class SqlTracker implements Store {
             statement.setString(1, key);
             try (ResultSet rs = statement.executeQuery()) {
                 while (rs.next()) {
-                    result.add(new Item(
-                            rs.getInt("id"),
-                            rs.getString("name"),
-                            rs.getTimestamp("created").toLocalDateTime()
-                    ));
+                    result.add(createItem(rs));
                 }
             }
         } catch (SQLException e) {
@@ -127,17 +119,21 @@ public class SqlTracker implements Store {
             statement.setInt(1, id);
             try (ResultSet rs = statement.executeQuery()) {
                 while (rs.next()) {
-                    result = new Item(
-                            rs.getInt("id"),
-                            rs.getString("name"),
-                            rs.getTimestamp("created").toLocalDateTime()
-                    );
+                    result = createItem(rs);
                 }
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return result;
+    }
+
+    private Item createItem(ResultSet rs) throws SQLException {
+        return new Item(
+                rs.getInt("id"),
+                rs.getString("name"),
+                rs.getTimestamp("created").toLocalDateTime()
+        );
     }
 
     @Override
